@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC WEB FORM</title>
+    <style>
+         body {
+         margin: 0;
+         padding: 0;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         margin-left: 20px; /
+         }
+         rm-container {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+        .form-container label {
+            margin-bottom: 5px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
+            margin-bottom: 10px;
+            width: 365px; 
+        }
+        .form-container input[type="tel"] {
+            margin-bottom: 10px;
+        }
+        .required-text {
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            margin-top: 5px;
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="post">
+            <ul style="list-style: none; padding: 0;">
+                <li>
+                    <label for="name">Your Name*</label>
+                </li>
+                <li>
+                    <input type="text" id="name" name="name">
+                </li>
+                <li>
+                    <label for="email">Email*</label>
+                </li>
+                <li>
+                    <input type="email" id="email" name="email">
+                </li>
+                <li>
+                    <label for="contact">Contact Number*</label>
+                </li>
+                <li>
+                    <input type="tel" id="contact" name="contact">
+                </li>
+                <li>
+                    <label for="message">Message</label>
+                </li>
+                <li>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                    <div class="required-text">required field</div>
+                </li>
+                <li>
+                    <button type="submit">Send</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

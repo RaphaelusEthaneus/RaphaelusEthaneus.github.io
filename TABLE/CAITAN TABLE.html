@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caitan Inventory System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0; 
+        }
+        th, td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 6px;
+        }
+        th {
+            background-color: #878787;
+        }
+        .title-container {
+            text-align: center;
+            border: 1px solid #000000;
+            padding: 7px;
+            margin-bottom: 0px; 
+            margin-top: 10px;
+            width: 49%; 
+            margin-left: 0;
+            background-color: rgb(116, 190, 255);
+        }
+        h1 {
+            font-size: 18px; 
+            margin: 0; 
+        }
+        .centered-text {
+            text-align: center;
+        }
+        td img {
+            display: block;
+            margin: 0 auto;
+        }
+        .supplier-cell {
+            background-color: rgb(255, 230, 0);
+        }
+        .supplier {
+            text-align: center;
+        }
+        .gray-background {
+            background-color: #D3D3D3;
+        }
+        .quantity-red {
+            color: red;
+        }
+        .gray-row {
+            background-color: #D3D3D3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="title-container">
+    <h1>INVENTORY SYSTEMS</h1>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Supplier</th> 
+        <th>Date</th> 
+        <th>Image</th>
+    </tr>
+    <tr>
+        <td>10001</td>
+        <td>Boy Bawang Adobo (pc)</td>
+        <td>1000</td>
+        <td rowspan="8" class="supplier-cell"><div class="supplier">KSK</div></td>  
+        <td rowspan="2"><div class="centered-text">5/14/2019</div></td> 
+        <td rowspan="8"><img src="file:///C:/Users/liezl/OneDrive/Documents/CAITAN%20SA1/RaphaelusEthaneus.github.io/image/boy%20bawang.jpg" alt="Boy Bawang" 
+            width="200px"></td>
+    </tr>
+    <tr>
+        <td>10002</td>
+        <td>Boy Bawang Adobo (pack)</td>
+        <td>200</td>
+        
+    </tr>
+    <tr class="gray-row">
+        <td>10003</td>
+        <td>Boy Bawang Garlic (pc)</td>
+        <td>3000</td>
+        <td rowspan="2" class="gray-background"><div class="centered-text">5/15/2019</div></td>
+    </tr>
+    <tr class="gray-row">
+        <td>10004</td>
+        <td>Boy Bawang Garlic (pack)</td>
+        <td class="quantity-red">150</td>
+        
+    </tr>
+    <tr>
+        <td>10005</td>
+        <td>Boy Bawang Spicy (pc)</td>
+        <td>4000</td>
+        <td rowspan="2"><div class="centered-text">5/16/2019</div></td>
+    </tr>
+    <tr>
+        <td>10006</td>
+        <td>Boy Bawang Spicy (pack)</td>
+        <td>240</td>
+    </tr>
+    <tr class="gray-row">
+        <td>10007</td>
+        <td>Boy Bawang BBQ (pc)</td>
+        <td>3000</td>
+        <td rowspan="2" class="gray-background"><div class="centered-text">5/17/2019</div></td>
+    </tr>
+    <tr class="gray-row">
+        <td>10008</td>
+        <td>Boy Bawang BBQ (pack)</td>
+        <td>210</td>
+    </tr>
+</table>
+
+</body>
+</html>
