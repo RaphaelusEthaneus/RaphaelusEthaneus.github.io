@@ -5,33 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BASIC WEB FORM</title>
     <style>
-         body {
-         margin: 0;
-         padding: 0;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         margin-left: 20px; /
-         }
-         rm-container {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 20px;
+        }
+        .form-container {
             display: flex;
             flex-direction: column;
-            align-items: left;
+            align-items: flex-start;
         }
         .form-container label {
             margin-bottom: 5px;
         }
         .form-container input[type="text"],
-        .form-container input[type="email"] {
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container textarea {
             margin-bottom: 10px;
-            width: 365px; 
-        }
-        .form-container input[type="tel"] {
-            margin-bottom: 10px;
+            width: 365px;
+            border-radius: 10px; /* Added border-radius for rounded corners */
+            padding: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-shadow: inset 0 5px 30px rgba(0, 0, 0, 0.12); /* Added inner shadow */
         }
         .required-text {
             color: rgb(0, 0, 0);
             font-size: 15px;
             margin-top: 5px;
-            margin-bottom: 10px; 
+            margin-bottom: 10px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px; 
+            border: none;
+            background-color: #aad6ff;
+            color: white;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+        .required-indicator::after {
+            content: "*";
+            color: red;
+            margin-left: 5px;
         }
     </style>
 </head>
@@ -40,29 +61,31 @@
         <form action="#" method="post">
             <ul style="list-style: none; padding: 0;">
                 <li>
-                    <label for="name">Your Name*</label>
+                    <label for="name" class="required-indicator">Your Name</label>
                 </li>
                 <li>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required>
                 </li>
                 <li>
-                    <label for="email">Email*</label>
+                    <label for="email" class="required-indicator">Email</label>
                 </li>
                 <li>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </li>
                 <li>
-                    <label for="contact">Contact Number*</label>
+                    <label for="contact" class="required-indicator">Contact Number</label>
                 </li>
                 <li>
-                    <input type="tel" id="contact" name="contact">
+                    <input type="tel" id="contact" name="contact" required>
                 </li>
                 <li>
                     <label for="message">Message</label>
                 </li>
                 <li>
                     <textarea id="message" name="message" rows="4"></textarea>
-                    <div class="required-text">required field</div>
+                </li>
+                <li>
+                    <div class="required-text">* required field</div>
                 </li>
                 <li>
                     <button type="submit">Send</button>
