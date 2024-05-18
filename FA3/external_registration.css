@@ -1,24 +1,37 @@
 * {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
 }
 
+body {
+    background-image: url('https://i.redd.it/rtlynwv7bmo61.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
 .form-container {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(159, 105, 229, 0.43); /* Semi-transparent white background */
+    border: 1px solid rgb(0, 0, 0); /* Slightly transparent border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
     margin: 50px auto;
-    max-width: 500px;
-    padding: 20px;
+    max-width: 600px;
+    padding: 40px; /* Increased padding for better spacing */
 }
 
 .form-header {
     text-align: center;
     margin-top: 0;
     padding-top: 10px;
+    color: #000000; /* Change the color to blue */
+    font-family: Arial, sans-serif; /* Change the font to Arial */
+    font-size: 2em; /* Increase the font size */
 }
 
 .header-line {
@@ -35,35 +48,42 @@
     padding-top: 10px;
 }
 
-.form-section {
-    margin-bottom: 20px;
-}
-
 .form-control {
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Increased margin for better spacing between form controls */
 }
 
-label {
+.form-control label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.8); /* Darker text color for better readability */
 }
 
-input[type="text"] {
+.form-control input[type="date"],
+.form-control input[type="text"],
+.form-control select {
     width: calc(100% - 20px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 10px; /* Increased padding for better input field appearance */
+    border: 1px solid rgba(126, 126, 126, 0.5); /* Slightly transparent border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+}
+
+.form-control select {
+    appearance: none;
 }
 
 .buttons {
     text-align: center;
+    margin-top: 20px; /* Increased margin for better spacing between buttons and form */
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increased padding for better button appearance */
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -85,37 +105,4 @@ button[type="button"] {
 
 button[type="button"]:hover {
     background-color: #cc0000;
-}
-
-.additional-info-section {
-    margin-top: 20px;
-}
-
-.additional-info-section .subheader {
-    text-align: center;
-    font-size: 1.2em;
-    margin-top: 15px;
-    padding-top: 10px;
-}
-
-.additional-info-section .form-control {
-    margin-bottom: 20px;
-}
-
-.additional-info-section .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.additional-info-section .input-group input,
-.additional-info-section .input-group select {
-    width: calc(100% - 20px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.additional-info-section .input-group select {
-    appearance: none;
 }
