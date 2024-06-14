@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            position: relative; 
+        }
+    
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://t4.ftcdn.net/jpg/01/35/90/45/360_F_135904506_P5YQXE86iUekAC4OXZBCKb7zfJBZnJT2.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(2px);
+        }
+    
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    
+        .friends-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative; 
+            z-index: 1; 
+        }
+    
+        .friend {
+            text-align: center;
+            margin: 15px;
+            background-color: #98e2ffba;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+    
+        .friend:hover {
+            transform: translateY(-5px);
+        }
+    
+        .friend img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 4px solid #ffffff;
+        }
+    
+        .friend h2 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    
+        .friend a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+    
+        .friend a:hover {
+            color: #0056b3;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Want to meet some of my friends?</h1>
+
+    <div class="friends-container">
+        <div class="friend">
+            <img src="assets/jok.jpg" alt="Jok">
+            <h2>This guy?</h2>
+            <a href="infographic_friend1.html">Click here</a>
+        </div>
+
+        <div class="friend">
+            <img src="assets/tin.jpg" alt="Tin">
+            <h2>Or this guy?</h2>
+            <a href="infographic_friend2.html">Click here</a>
+        </div>
+
+        <div class="friend">
+            <img src="assets/dwayne.jpg" alt="Dwayne">
+            <h2>Or him? </h2>
+            <a href="infographic_friend3.html">Click here</a>
+        </div>
+    </div>
+
+</body>
+</html>
