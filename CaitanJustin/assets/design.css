@@ -1,0 +1,133 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(221, 221, 221, 0.7);
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/149/79/664/final-fantasy-xiv-a-realm-reborn-final-fantasy-xiv-video-games-video-game-art-games-art-hd-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(3.3px);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(102, 180, 198, 0.638);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: rgba(104, 187, 255, 0.608);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hobbies h2 {
+    color: #0099ff;
+}
+
+.favorite-games h2 {
+    color: #ff9d00;
+}
+
+.favorite-songs h2 {
+    color: #00e5ff;
+}
+
+.favorite-food h2 {
+    color: #ff0000;
+}
+
+.quote h2 {
+    color: #5eff00;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+.profile-info {
+    padding: 10px;
+    background-color: rgba(104, 187, 255, 0.608);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
