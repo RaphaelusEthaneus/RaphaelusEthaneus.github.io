@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FEU Login Copy</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #2f5d39;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  
+    .login-form {
+      width: 100%;
+      max-width: 450px;
+      background-color: #2f5d39;
+      border-radius: 10px;
+      padding: 20px;
+    }
+  
+    .form-control {
+      background-color: #ffffff;
+      color: black;
+    }
+  
+    .btn-primary {
+      background-color: #2f5d39;
+      border-color: white;
+      width: 150px;
+      color: white;
+    }
+  
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-outline-light:hover,
+    .btn-outline-light:active,
+    .btn-outline-light:focus {
+      background-color: #2f5d39;
+      border-color: white;
+      color: white;
+      box-shadow: none;
+    }
+  
+    .btn-outline-light {
+      border-color: transparent;
+      color: white;
+      background-color: transparent; 
+    }
+  
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  
+    .logo {
+      width: 120px;
+    }
+  
+    .browse-courses {
+      margin-left: 90px;
+      color: white;
+      text-decoration: underline;
+    }
+  
+    .browse-courses:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  
+    .form-group {
+      position: relative;
+    }
+  
+    .invalid-feedback {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      color: red; 
+    }
+  
+    .form-inline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .forgot-password {
+      margin-top: 10px;
+      text-decoration: underline;
+    }
+  
+    .horizontal-links a {
+      text-decoration: underline;
+      font-size: smaller;
+      color: white;
+      margin: 0 5px;
+    }
+  
+    .horizontal-line {
+      border-top: 1px solid white;
+      margin: 20px 0;
+    }
+
+    .instructure-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .instructure-logo {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-form">
+    <div class="header">
+      <img src="images/FEU LOGO.png" alt="" class="logo">
+      <a href="#" class="browse-courses">Browse courses</a>
+    </div>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+        <div class="invalid-feedback" id="usernameError">Please enter your username.</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+        <div class="invalid-feedback" id="passwordError">Please enter your password.</div>
+      </div>
+      <div class="form-inline">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="staySignedIn">
+          <label class="form-check-label" for="staySignedIn">Stay signed in</label>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="validateForm()">Log In</button>
+      </div>
+      <a href="#" class="d-block forgot-password text-white">Forgot Password?</a>
+      <div class="horizontal-line"></div>
+      <button type="button" class="btn btn-outline-light btn-block mt-3">
+        <img src="https://www.pikpng.com/pngl/m/200-2001965_office-365-logo-blue-clipart.png" alt="" style="width: 20px; vertical-align: middle; margin-right: 5px;">
+        Login with Microsoft
+      </button>
+    </form>
+    <div class="text-center mt-4 horizontal-links">
+      <a href="#" class="text-white">Help</a>
+      <a href="#" class="text-white">Privacy Policy</a>
+      <a href="#" class="text-white">Acceptable Use Policy</a>
+      <a href="#" class="text-white">Facebook</a>
+      <a href="#" class="text-white">Twitter</a>
+    </div>
+    <div class="instructure-section">
+      <img src="images/instructure-logo.png" alt="" class="instructure-logo" style="width: 150px;">
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      const username = document.getElementById('username');
+      const password = document.getElementById('password');
+      const usernameError = document.getElementById('usernameError');
+      const passwordError = document.getElementById('passwordError');
+
+      username.classList.remove('is-invalid');
+      password.classList.remove('is-invalid');
+      usernameError.style.display = 'none';
+      passwordError.style.display = 'none';
+
+      if (username.value.trim() === '') {
+        username.classList.add('is-invalid');
+        usernameError.innerText = 'Please enter your username.';
+        usernameError.style.display = 'block';
+      } else if (password.value.trim() === '') {
+        password.classList.add('is-invalid');
+        passwordError.innerText = 'Please enter your password.';
+        passwordError.style.display = 'block';
+      } else {
+        username.classList.add('is-invalid');
+        usernameError.innerText = 'Username not found.';
+        usernameError.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
