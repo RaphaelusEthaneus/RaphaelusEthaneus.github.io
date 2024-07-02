@@ -97,13 +97,13 @@ main {
 .product-carousel {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensure items wrap properly */
+    flex-wrap: wrap; 
 }
 
 .product-item {
     width: 300px;
-    height: 400px; /* Adjust the height as needed */
-    margin: 20px auto; /* Add margin to create space between items */
+    height: 400px; 
+    margin: 20px auto; 
     text-align: center;
     box-shadow: 0 0 10px rgb(255, 255, 255);
     padding: 20px;
@@ -120,7 +120,7 @@ main {
 }
 
 .product-details {
-    margin-bottom: 15px; /* Adjust margin for details within each product */
+    margin-bottom: 15px; 
 }
 
 .price {
@@ -137,8 +137,8 @@ main {
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensure it behaves like a block element */
+    text-decoration: none;
+    display: inline-block; 
     transition: background-color 0.3s;
 }
 

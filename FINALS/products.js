@@ -1,5 +1,3 @@
-// products.js
-
 document.addEventListener("DOMContentLoaded", function() {
     var carouselContainers = document.querySelectorAll('.carousel-container');
 
@@ -32,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
             slides[slideIndex].style.display = 'block';
 
-            // Adjust container height to match current slide height
             carousel.style.height = slides[slideIndex].offsetHeight + 'px';
         }
     });
