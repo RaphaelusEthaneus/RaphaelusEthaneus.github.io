@@ -78,7 +78,7 @@ nav ul li a {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px auto; 
     text-align: center;
     box-shadow: 0 0 10px rgb(0, 102, 255);
     overflow: hidden; 
@@ -139,4 +139,8 @@ nav ul li a {
 
 .product-details-container .buy-now:hover {
     background-color: #e6b804;
+}
+
+.product-details-container + .product-details-container {
+    margin-top: 65px; 
 }
