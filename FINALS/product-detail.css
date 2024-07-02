@@ -62,7 +62,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Align navigation links to the right */
+    justify-content: flex-end;
 }
 
 nav ul li {
@@ -76,7 +76,6 @@ nav ul li a {
     font-size: 1.1em;
 }
 
-/* Style for product details container */
 .product-details-container {
     width: 80%;
     max-width: 1200px;
@@ -86,15 +85,19 @@ nav ul li a {
     margin: 20px auto;
     text-align: center;
     box-shadow: 0 0 10px rgb(0, 102, 255);
-    overflow: hidden; /* Ensure the rounded corners are applied to the image */
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-details-container img {
     max-width: 100%;
     height: auto;
-    max-height: 200px; /* Adjust the maximum height as needed */
-    width: auto; /* Ensures the image scales proportionally */
-    border-radius: 10px; /* Rounded corners for the image */
+    max-height: 200px; 
+    width: auto; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
 }
 
 .product-details-container h3 {
@@ -102,9 +105,22 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-.product-details-container p {
-    line-height: 1.6;
+.product-item {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+.product-item img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px; /* Margin between image and text */
+}
+
+.product-item p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left */
 }
 
 .product-details-container .price {
@@ -112,12 +128,6 @@ nav ul li a {
     color: #333;
     font-size: 1.5em;
     margin-bottom: 20px;
-}
-
-.product-details-container .description {
-    margin-bottom: 20px;
-    text-align: left;
-    padding: 0 20px;
 }
 
 .product-details-container .buy-now {

@@ -1,21 +1,39 @@
-$(document).ready(function(){
-    $('.pokecoins-carousel').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
-        nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
-    });
+// products.js
 
-    $('.special-offers-carousel').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
-        nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
+document.addEventListener("DOMContentLoaded", function() {
+    var carouselContainers = document.querySelectorAll('.carousel-container');
+
+    carouselContainers.forEach(function(container) {
+        var carousel = container.querySelector('.product-carousel');
+        var prevButton = container.querySelector('.carousel-prev');
+        var nextButton = container.querySelector('.carousel-next');
+
+        var currentSlide = 0;
+        var totalSlides = carousel.querySelectorAll('.product-item').length;
+
+        showSlide(currentSlide);
+
+        prevButton.addEventListener('click', function() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        nextButton.addEventListener('click', function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        function showSlide(slideIndex) {
+            var slides = carousel.querySelectorAll('.product-item');
+
+            slides.forEach(function(slide) {
+                slide.style.display = 'none';
+            });
+
+            slides[slideIndex].style.display = 'block';
+
+            // Adjust container height to match current slide height
+            carousel.style.height = slides[slideIndex].offsetHeight + 'px';
+        }
     });
 });
