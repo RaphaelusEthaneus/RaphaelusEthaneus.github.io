@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden; 
 }
 
 header {
@@ -137,6 +138,7 @@ h1 {
     display: inline-block;
     transition: background-color 0.3s;
     margin-top: 20px;
+    text-align: center;
 }
 
 .checkout-button:hover {
