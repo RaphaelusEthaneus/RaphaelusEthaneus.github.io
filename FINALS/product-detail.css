@@ -126,7 +126,7 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.product-details-container .buy-now {
+.product-details-container .add-to-cart {
     background-color: #ffcb05;
     color: #000000;
     border: none;
@@ -137,7 +137,7 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-.product-details-container .buy-now:hover {
+.product-details-container .add-to-cart:hover {
     background-color: #e6b804;
 }
 
